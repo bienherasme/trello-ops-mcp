@@ -1,0 +1,60 @@
+{
+  "name": "trello-ops-mcp",
+  "version": "0.1.0",
+  "description": "Local, read-only Model Context Protocol (MCP) server that gives LLM agents deterministic operational signals for Trello boards — structural history, card movement, workflow flow, staleness, and due-date facts.",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "trello",
+    "claude",
+    "claude-desktop",
+    "llm",
+    "llm-agent",
+    "ai-agent",
+    "audit",
+    "analytics",
+    "read-only"
+  ],
+  "type": "module",
+  "license": "MIT",
+  "author": "Bienvenido Herasme <bienherasme@gmail.com>",
+  "homepage": "https://github.com/YOUR_GITHUB_USERNAME/trello-ops-mcp#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YOUR_GITHUB_USERNAME/trello-ops-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YOUR_GITHUB_USERNAME/trello-ops-mcp/issues"
+  },
+  "main": "dist/index.js",
+  "bin": {
+    "trello-ops-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsc -p tsconfig.json && chmod +x dist/index.js",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "dotenv": "^17.4.2",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "tsx": "^4.23.12",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.10"
+  }
+}
